@@ -1,0 +1,19 @@
+
+.navbar {
+	flex: 0 0 200px;
+	padding: 20px;
+	background-color: rgb(86, 84, 84);
+}
+.container {
+	position: fixed;
+}
+
+li{
+	&:not(:last-child) {
+		margin-bottom: 10px
+	}
+}
+
+.link {
+	color: #fff;
+}

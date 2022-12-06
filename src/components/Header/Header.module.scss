@@ -1,0 +1,28 @@
+@import '../../scss/classesStyle.scss';
+
+.header {
+	padding: 5px 20px;
+	background-color: rgb(234, 238, 239);
+	height: 70px;
+	position: fixed;
+	width: 100%;
+	z-index: 50;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@apply shadow-md
+}
+
+.headerLabel {
+	font-size: rem(20);
+	font-weight: 700;
+}
+
+headerAuth {
+
+}
+
+.authList {
+	display: flex;
+	gap:15px;
+}

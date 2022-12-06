@@ -1,0 +1,131 @@
+@import '../../scss/classesStyle.scss';
+
+
+.login{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	padding: 150px 0px 20px 0px;
+	height: 100%;
+	position: relative;
+}
+
+.container {
+	padding: 0px 15px;
+	display: flex;
+	position: relative;
+	z-index: 2;
+}
+
+.about {
+	padding: 0px 20px 0px 70px;
+	flex: 0 1 500px;
+	color: #fff;
+	.subtitle{
+		text-align: center;
+		margin-bottom: rem(10);
+
+	}
+	.aboutTitle {
+		text-align: center;
+		margin-bottom: rem(25);
+		font-size: rem(50);
+		font-weight: 700;
+	}
+	.text {
+		line-height: 130%;
+	}
+}
+.formBody{
+padding: 0px 0px 0px 150px;
+}
+
+@media (max-width: 890px){
+	.login {
+		padding: 100px 0px 20px 0px;
+	}
+	.formBody{
+		padding: 0px 0px 0px 70px;
+		}
+}
+
+@media (max-width: 767.98px){
+	.login {
+		padding: 70px 0px 20px 0px;
+	}
+	.container {
+		display: block;
+	}
+	.formBody{
+		padding: rem(30) rem(40);
+		}
+	.about {
+		padding: 0px 20px;
+		margin: 0px 0px 30px 0px;
+	}
+}
+
+@media (max-width: 510px){
+	
+}
+
+.loginForm {	
+	background-color: #fff;
+	padding: rem(30);
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+
+	.loginFormTitle {
+		text-align: center;
+		font-size: rem(20);
+		margin-bottom: rem(20);
+	}
+	.form {
+		display: flex;
+		flex-direction: column;
+		input {
+			padding: 10px 10px;
+			border-radius: 10px;
+			border: 1px solid #cdd7cf;
+			margin-bottom: rem(25);
+			&:focus {
+				border: 1px solid rgb(13, 157, 234);
+			}
+		}
+
+		.formButton {
+			padding: 5px 10px;
+			line-height: 180%;
+			background-color: rgb(13, 157, 234);
+			color: #fff;
+			border-radius: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid rgb(13, 157, 234);
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: #fff;
+					color: rgb(13, 157, 234);
+					border: 1px solid rgb(13, 157, 234);
+				}
+			}
+		}
+		label {
+			margin-left: rem(10);
+		}
+	}
+}
+
+
+.bgImage {
+	position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+}
+
+
+.errors {
+	color: red;
+}
