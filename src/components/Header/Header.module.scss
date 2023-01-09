@@ -13,6 +13,21 @@
 	@apply shadow-md
 }
 
+.headerLeft {
+	display: flex;
+	align-items: center;
+	.headerLogo {
+		margin-right: rem(10);
+	}
+	 .headerSearch {
+		border: 2px solid rgba(0, 0, 0, 0.1);
+		height: rem(48);
+		border-radius: rem(25);
+	}
+}
+
+
+
 .headerLabel {
 	font-size: rem(20);
 	font-weight: 700;

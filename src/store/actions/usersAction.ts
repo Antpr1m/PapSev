@@ -1,4 +1,4 @@
-import { usersApi } from './../../api/api';
+import { usersApi } from "./../../api/usersApi";
 import { usersSlice } from "../slices/usersSlice"
 import { TypedDispatch } from "../store"
 

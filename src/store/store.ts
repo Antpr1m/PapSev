@@ -7,15 +7,17 @@ import appReducer from './slices/appSlice'
 
 
 export const rootReducer = combineReducers({
+	[profileApi.reducerPath]: profileApi.reducer,
 	users: usersReducer,						// Default export from userSlice
 	auth: authReducer,
-	app: appReducer,
-	[profileApi.reducerPath]: profileApi.reducer
+	app: appReducer
 })
 
 export function setupStore() {
 	return configureStore({
-		reducer: rootReducer
+		reducer: rootReducer,
+		middleware: (getDefaultMiddleware) =>
+			getDefaultMiddleware().concat(profileApi.middleware)
 	})
 }
 

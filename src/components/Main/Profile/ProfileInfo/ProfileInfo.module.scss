@@ -1,0 +1,35 @@
+@import '../../../../scss/classesStyle.scss';
+
+.profileInfo{
+	@apply pt-5;
+}
+
+.container{
+	@apply px-8 flex;	
+}
+
+.profileCommonImg{
+	flex: 0 1 33.333%;
+	flex-wrap: wrap;
+}
+
+.profileImg{
+	img {
+
+	}
+}
+
+.profileAbout{
+	flex: 66.667;
+	margin: 0px 0px 0px rem(30);
+	border: 2px solid rgba(152, 157, 159, 0.5);
+	@apply py-3 px-5 rounded-md shadow-xl
+}
+
+.profileStatus{
+
+}
+
+.profileInputDownload{
+
+}

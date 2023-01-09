@@ -44,7 +44,7 @@ export const logout = () => {
 		try {
 			const response = await instance.delete('auth/login')
 			if (response.data.resultCode === ResultCodeEnum.Success) {
-				dispatch(authSlice.actions.setAuthUserData({ id: null, email: null, login: null, isAuth: false }))
+				dispatch(authSlice.actions.setAuthUserData({ id: 0, email: "", login: "", isAuth: false }))
 			}
 		} catch (error) {
 

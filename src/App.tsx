@@ -1,20 +1,17 @@
 import './App.scss';
 import Header from './components/Header/Header';
 import { Routes, Route, Navigate } from 'react-router-dom'
-import Profile from './components/Main/Profile';
+import Profile from './components/Main/Profile/Profile';
 import Users from './components/Main/Users/Users';
-import Navbar from './components/Main/Navbar';
+import { Navbar } from './components/Main/Navbar';
 import Footer from './components/Footer/Footer';
 import Login from './components/Login/Login';
 import { useEffect } from 'react';
 import { initializeApp } from './store/slices/appSlice';
 import { useAppSelector } from './hooks/hooks';
+import { UserPage } from './components/UserPage';
 
 function App() {
-	const { isAuth } = useAppSelector(state => state.auth)
-
-
-
 	return (
 		<div className="wrapper">
 			<Header />
@@ -24,7 +21,7 @@ function App() {
 					<Routes>
 						<Route path='/' element={<Navigate to={'/profile'} />} />
 						<Route path='/profile' element={<Profile />} />
-						<Route path='/profile/:id' element={<Profile />} />
+						<Route path='/profile/:userId' element={<Profile />} />
 						<Route path='/users' element={<Users />} />
 						<Route path='/login' element={<Login />} />
 					</Routes>

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { IUsers, ResultCodeEnum } from '../types/types'
+import { ResultCodeEnum } from '../types/types'
 
 export const instance = axios.create({
 	withCredentials: true,
@@ -17,14 +17,7 @@ export type loginResponseType = {
 	userId: number
 }
 export type authResponseType = {
-	id: number | null, email: string | null, login: string | null
-}
-
-
-export const usersApi = {
-	fetchingUsers: (currentPage = 1, pageSize = 10) => {
-		return instance.get<IUsers>(`users?page=${currentPage}&count=${pageSize}`)
-	}
+	id: number, email: string, login: string
 }
 
 

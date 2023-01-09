@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { IProfileResponse } from '../types/types';
+import { IProfileResponse, ResponseStatus } from '../types/types';
 
 
 
@@ -14,9 +14,21 @@ export const profileApi = createApi({
 			query: (userId: number) => ({
 				url: `${userId}`
 			})
+		}),
+		getStatus: build.query<string, number>({
+			query: (userId: number) => ({
+				url: `status/${userId}`
+			})
+		}),
+		updateStatus: build.mutation<ResponseStatus, any>({
+			query: (body) => ({
+				url: 'status',
+				method: 'PUT',
+				body
+			}),
 		})
 	})
 });
 
-export const { useLazyGetProfileQuery } = profileApi;
-export const { useGetProfileQuery } = profileApi;
+
+export const { useGetProfileQuery, useGetStatusQuery, useUpdateStatusMutation } = profileApi;
